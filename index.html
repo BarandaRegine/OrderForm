@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pizza Order Form</title>
+	<style type="text/css">
+		body{
+			font-family: arial;
+		}
+		table{
+			border: 5px solid #DAA520;
+			border-collapse: collapse;
+			margin: 10px auto;
+		}
+		caption{
+			border-left: 5px solid #DAA520;
+			border-right: 5px solid #DAA520;
+			border-top: 5px solid #DAA520;
+			padding: 20px;
+			letter-spacing: 8px;
+			line-height: 20px;
+		}
+		thead tr{
+			background-color: #FADA5E;
+		}
+		td th{
+			border-collapse: collapse;
+			margin: 10px;
+		}
+		tbody th{
+			background-color: #DAA520;
+			padding: 10px;
+		}
+		tbody tr{
+			background-color: #b4dfe5;
+			padding: 20px;
+		}
+
+		.photo{
+			width: 200px;
+			height: 150px;
+			box-shadow: 2px 5px 6px gray;
+			margin: 15px;
+			
+		}
+		.icons{
+			width: 25px;
+			height: 20px;
+			padding: 0 8px;
+			margin-top: 10px;
+		}
+		label{
+			font-size: 1em;
+			padding: 10px;
+			color: white;
+			font-weight: bold;
+			
+		}
+		textarea{
+			resize: none;
+		}
+		input[type=submit]{
+			width: 100%;
+			background-color: #E1AD01;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 15px;
+			cursor: pointer;
+			font-family: Arial;
+			font-size: 1.125em;
+		}
+		input[type=submit]:hover{
+			background-color: #FADA5E;
+			color: #1245c;
+		}
+		td, th{
+			border-collapse: collapse;
+			padding: 15px;
+		}
+		input[type=text], textarea, select{
+			padding: 5px 15px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		.customerinfo{
+			color: midnightblue;
+		}
+
+		</style>
+</head>
+
+<body>
+	<table>
+		<form>
+			<caption>PIZZAZERIA <br><b>ORDER FORM</b></caption>
+			<thead>
+				<th colspan="2">Customer Information</th>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><img src="BARANDA_IMAGES_ITBD/name.png" class="icons"><label class="customerinfo" for="fullname">Fullname</label></td>
+					<td><input type="text" id="fullname" name="fullname" size="30" placeholder="Enter you Fullname" maxlength="50" autofocus required="">
+					</td> <br>
+				</tr>
+				<tr>
+					<td><img src="BARANDA_IMAGES_ITBD/address.png" class="icons"><label class="customerinfo" for="address">Complete Address</label></td>
+					<td><input type="text" id="address" name="address" size="30" placeholder="Enter your Complete Address" maxlength="70" required></td>
+				</tr>
+				<tr>
+					<td><img src="BARANDA_IMAGES_ITBD/phone.png" class="icons"><label class="customerinfo" for="contactNumber">Contact Number</label></td>
+					<td><input type="text" id="contactNumber" name="contactNumber" size="30" placeholder="Enter your Contact Number" maxlength="20" required></td>
+				</tr>
+				<tr>
+					<td><img src="BARANDA_IMAGES_ITBD/email.png" class="icons"><label class="customerinfo" for="emailAddress">Email Address</label></td>
+					<td><input type="text" id="emailAddress" name="emailAddress" size="30" placeholder="Enter your Email Address" maxlength="50" required></td>
+				</tr>
+				<tr>
+					<td><img src="BARANDA_IMAGES_ITBD/location.png" class="icons"><label class="customerinfo" for="placeDescription">How to get there <br>(place description)</label></td>
+					<td><textarea rows="10" cols="45" required></textarea></td>
+				</tr>
+
+
+				<tr>
+					<th colspan="2">Burger</th>
+				</tr>
+				
+				<tr style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(BARANDA_IMAGES_ITBD/burger.jpg); background-position: left;">
+
+					<td><img src="BARANDA_IMAGES_ITBD/burger.jpg" class="photo"></td>
+					<td>
+						
+						<label for="burgerPatty" class="title">Burger Patty</label><br><br>
+						<input type="radio" name="size" id="singlePatty" value="singlePatty" CHECKED>
+						<img src="BARANDA_IMAGES_ITBD/singlePatty.jpg" class="icons"><label for="singlePatty">Single Patty</label>
+
+						<input type="radio" name="size" id="doublePatty" value="singlePatty" CHECKED>
+						<img src="BARANDA_IMAGES_ITBD/doublePatty.jpg" class="icons"><label for="doublePatty">Double Patty</label> <br><br>
+
+
+
+
+						<label for="extras">Extras</label><br><br>
+						<input type="checkbox" id="withCheese" name="withCheese" value="withCheese">
+						<img src="BARANDA_IMAGES_ITBD/cheese.png" class="icons"><label for="withCheese">With Cheese</label><br>
+
+						<input type="checkbox" id="coleslaw" name="coleslaw" value="coleslaw">
+						<img src="BARANDA_IMAGES_ITBD/coleslaw.png" class="icons"><label for="coleslaw">Coleslaw</label><br>	
+
+						<input type="checkbox" id="tomato" name="tomato" value="tomato">
+						<img src="BARANDA_IMAGES_ITBD/tomato.png" class="icons"><label for="tomato">Tomato</label><br>	
+
+						<input type="checkbox" id="onion" name="onion" value="onion">
+						<img src="BARANDA_IMAGES_ITBD/onion.jpg" class="icons"><label for="onion">Onion</label><br>
+
+						<input type="checkbox" id="cucumber" name="cucumber" value="cucumber">
+						<img src="BARANDA_IMAGES_ITBD/cucumber.png" class="icons"><label for="cucumber">Cucumber</label><br>	
+
+						<input type="checkbox" id="bacon" name="bacon" value="bacon">
+						<img src="BARANDA_IMAGES_ITBD/bacon.png" class="icons"><label for="bacon">Bacon</label> <br><br>
+
+						<label for="bun">Choice of Bun</label> <br>
+						<select name="bun" id="bun" size="1">
+								<option value="whitebun">White bun</option>
+								<option value="wheatbun">Wheat bun</option>
+						</select><br><br>
+
+						<label for="quantity">Quantity</label><br>
+						<select name="qty" id="qty" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+						</select><br><br>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="2">Pasta</th>
+				</tr>
+
+				<tr style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(BARANDA_IMAGES_ITBD/pastabackpic.jpg); background-size: cover;">
+					<td><img src="BARANDA_IMAGES_ITBD/pasta.jpg" class="photo"></td>
+					<td>
+						<label for="pasta">Pasta Sauce</label><br><br>
+						<input type="radio" id="carbonara" name="pasta" value="carbonara" checked>
+						<label for="carbonara">Carbonara</label>
+
+						<input type="radio" id="pesto" name="pasta" value="pesto">
+						<label for="pesto">Pesto</label>
+
+						<input type="radio" id="spaghetti" name="pasta" value="spaghetti" >
+						<label for="spaghetti">Spaghetti</label><br><br>
+
+						<label>Add More</label> <br>
+							<input type="checkbox" name="extraSauce" id="extraSauce" value="extraSauce">
+							<img src="BARANDA_IMAGES_ITBD/sauce.jpg" class="icons"><label for="extraSauce">Extra Sauce</label><br>
+
+							<input type="checkbox" name="extraCheese" id="extraCheese" value="extraCheese">
+							<img src="BARANDA_IMAGES_ITBD/pastacheese.jpg" class="icons"><label for="extraCheese">Extra Cheese</label> <br><br>
+
+						<label for="quantity">Quantity (per Box)</label><br>
+						<select name="qty" id="qty" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+
+						</select><br><br>
+						
+
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="2">Fries</th>
+				</tr>
+				<tr style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(BARANDA_IMAGES_ITBD/friesbackpic.jpg); background-size: cover">
+					<td><img src="BARANDA_IMAGES_ITBD/fries.jpg" class="photo"></td>
+					<td>
+						<label for="size">Size</label><br>
+						<input type="radio" id="S" name="size" value="S" checked>
+						<label for="S">S</label>
+
+						<input type="radio" id="M" name="size" value="M">
+						<label for="M">M</label>
+
+						<input type="radio" id="L" name="size" value="L">
+						<label for="L">L</label><br><br>
+
+			
+						<label for="friesFlavor">Flavor</label><br>
+						<input type="radio" id="bbq" name="flavor" value="bbq" checked>
+						<label for="bbq">BBQ</label>
+
+						<input type="radio" id="cheese" name="flavor" value="cheese">
+						<label for="cheese">Cheese</label>
+
+						<input type="radio" id="sourCream" name="flavor" value="sourCream">
+						<label for="sourCream">Sour Cream</label><br><br>
+			
+						<label for="quantity">Quantity</label><br>
+						<select name="qty" id="qty" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+
+						</select><br><br>
+					</td>
+				</tr>
+
+				<tr>
+				<th colspan="2">Drinks</th>
+				</tr>
+
+				<tr style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(BARANDA_IMAGES_ITBD/drinksbackpic.jpg); background-size: cover">
+					<td><img src="BARANDA_IMAGES_ITBD/drinks1.jpg" class="photo"></td>
+					<td><label>Choice of Drinks</label><br>
+						<select name="deliverrinks" id="drinks" size="1">
+							<option value="Coke">Coke</option>
+							<option value="Sprite">Sprite</option>
+							<option value="Royal">Royal</option>
+							<option value="IcedTea">Iced Tea</option>
+							<option value="PineappleJuice">Pineapple Juice</option>
+							<option value="OrangeJuice">Orange Juice</option>
+						</select><br><br>
+					
+			
+						<label for="size">Size</label><br>
+						<input type="radio" name="size" id="S" value="S" CHECKED>
+						<label for="S">S</label>
+
+						<input type="radio" name="size" id="M" value="M">
+						<label for="M">M</label>
+
+						<input type="radio" name="size" id="L" value="L">
+						<label for="L">L</label><br><br>
+
+						<label for="quantity">Quantity</label><br>
+						<select name="qty" id="qty" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+
+						</select><br><br>
+					</td>
+				</tr>
+
+				<tr>
+					<th colspan="2">Mode of Delivery</th>
+				</tr>
+				<tr>
+				<td>
+					<input type="radio" name="delivery" id="deliver" checked>
+					<img src="BARANDA_IMAGES_ITBD/deliver.png" class="icons"><label style="color: midnightblue" for="deliver">Deliver</label>
+				</td>
+				<td>
+					<input type="radio" name="delivery" id="pickup">
+					<img src="BARANDA_IMAGES_ITBD/pickup.png" class="icons"><label style="color: midnightblue" for="pickup">Pick-up</label>
+				</td>
+				</tr>
+
+				<tr>
+					<td style="text-align: center"><label style="color: midnightblue; font-weight: normal"  for="feedback"><i>Feedback on how to improve our <br> 
+					Ordering Form</i></label></td>
+					<td><textarea rows="10" cols="45"></textarea></td>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				
+
+				<tr>
+					<th colspan="2"><input type="submit" id="btn1" value="Submit Order Form"></th>
+				</tr>
+			</tfoot>		
+		</form>
+	</table>
+</body>
+</html>
